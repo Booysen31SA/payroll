@@ -49,8 +49,7 @@ public class EmployeeRepository implements IEmployeeRepository{
 
     @Override
     public void delete(String s) {
-        if(read(s) != null){
-            employees.remove(s);
-        }
+        Employee employee = read(s);
+        this.employees.remove(s, employee);
     }
 }
