@@ -18,7 +18,8 @@ public class EmployeeServiceTest {
                  employee = EmployeeFactory.buildEmployee("216062241"
                                                         , "Matthew"
                                                         , "Booysen"
-                                                        , "Male");
+                                                        , "Male"
+                                                        ,"Coloured");
     }
 
     @Test
@@ -49,7 +50,7 @@ public class EmployeeServiceTest {
         service.create(employee); //Because value gets deleted
         System.out.println(service.read("216062241"));
 
-        Employee employeeUpdated = EmployeeFactory.buildEmployee("216062241", "Matthew", "Peterson", "Updated");
+        Employee employeeUpdated = EmployeeFactory.buildEmployee("216062241", "Matthew", "Peterson", "Updated","Coloured");
         service.update(employeeUpdated);
         Employee em = service.read("216062241");
         assertNotEquals(employee.getSurname(), em.getSurname());

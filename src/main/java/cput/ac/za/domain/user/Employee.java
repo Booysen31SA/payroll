@@ -1,6 +1,7 @@
 package cput.ac.za.domain.user;
 
 import cput.ac.za.domain.demography.Gender;
+import cput.ac.za.domain.demography.Race;
 
 public class Employee {
 
@@ -8,12 +9,14 @@ public class Employee {
     private String firstName;
     private String surname;
     private Gender gender;
+    private Race race;
 
     public Employee(Employee.Builder Build){
         this.empNumber = Build.empNumber;
         this.firstName = Build.firstName;
         this.surname = Build.surname;
         this.gender = Build.gender;
+        this.race = Build.race;
     }
 
     public String getEmpNumber() {
@@ -31,6 +34,10 @@ public class Employee {
         return gender;
     }
 
+    public Race getRace() {
+        return race;
+    }
+
     @Override
     public String toString() {
         return
@@ -38,7 +45,9 @@ public class Employee {
                 "\nFirst Name      :" + firstName +
                 "\nSurname         :" + surname +
                 "\nGender          :" + gender.getGender()+
-                "\n From Gender\n" + gender ;
+                "\nRace            :" + race.getRace()+
+                "\nFrom Gender\n" + gender +
+                "\nRace\n" +race;
     }
 
     public static class Builder{
@@ -47,6 +56,7 @@ public class Employee {
         private String firstName;
         private String surname;
         private Gender gender;
+        private Race race;
 
         public Builder empNumber(String empNumber){
             this.empNumber = empNumber;
@@ -62,6 +72,10 @@ public class Employee {
         }
         public Builder gender(Gender gender){
             this.gender = gender;
+            return this;
+        }
+        public Builder race(Race race){
+            this.race = race;
             return this;
         }
 

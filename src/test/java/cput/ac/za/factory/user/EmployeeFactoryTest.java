@@ -14,7 +14,8 @@ public class EmployeeFactoryTest {
         employee = EmployeeFactory.buildEmployee("216062241"
                                                  ,"Matthew"
                                                  ,"Booysen"
-                                                 , "Male");
+                                                 , "Male"
+                                                 ,"Coloured");
     }
 
     @Test

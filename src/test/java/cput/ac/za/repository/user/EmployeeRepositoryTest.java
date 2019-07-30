@@ -18,7 +18,8 @@ public class EmployeeRepositoryTest {
         employee = EmployeeFactory.buildEmployee("216062241"
                                                 ,"Matthew"
                                                 ,"Booysen"
-                                                ,"Male");
+                                                ,"Male"
+                                                ,"Coloured");
     }
 
     @Test
@@ -52,7 +53,8 @@ public class EmployeeRepositoryTest {
         Employee employeeUpdated = EmployeeFactory.buildEmployee("216062241"
                 ,"Matthew"
                 ,"Peterson"
-                ,"Male");
+                ,"Male"
+                ,"Coloured");
         repository.update(employeeUpdated);
 
         Employee em = repository.read("216062241");

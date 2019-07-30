@@ -15,7 +15,7 @@ public class EmployeeTest {
     @Before
     public void setUp() throws Exception {
         employeeRepository = EmployeeRepository.getRepository();
-        employee = EmployeeFactory.buildEmployee("216062241", "Matthew", "Booysen", "Male");
+        employee = EmployeeFactory.buildEmployee("216062241", "Matthew", "Booysen", "Male", "Coloured");
     }
 
     @Test
@@ -40,5 +40,11 @@ public class EmployeeTest {
     public void getGender() {
         assertNotNull(employee.getGender().getEmpNumber());
         System.out.println(employee.getGender().getGender());
+    }
+
+    @Test
+    public void getRace() {
+        assertNotNull(employee.getRace().getEmpNumber());
+        System.out.println(employee.getRace().getRace());
     }
 }
