@@ -26,7 +26,7 @@ public class GenderRepository implements IGenderRepository {
 
     @Override
     public Gender create(Gender gender) {
-        if(read(gender.getEmpNumber()) != null){
+        if(read(gender.getEmpNumber()) == null){
             genders.add(gender);
         }
         return gender;
@@ -44,8 +44,8 @@ public class GenderRepository implements IGenderRepository {
     public Gender update(Gender gender) {
 
         if(read(gender.getEmpNumber()) != null){
-            delete(gender.getEmpNumber());
-            create(gender);
+           delete(gender.getEmpNumber());
+           create(gender);
         }
         return gender;
     }

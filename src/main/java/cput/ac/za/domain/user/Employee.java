@@ -31,6 +31,16 @@ public class Employee {
         return gender;
     }
 
+    @Override
+    public String toString() {
+        return
+                "Employee Number :'" + empNumber +
+                "\nFirst Name      :" + firstName +
+                "\nSurname         :" + surname +
+                "\nGender          :" + gender.getGender()+
+                "\n From Gender\n" + gender ;
+    }
+
     public static class Builder{
 
         private String empNumber; //primary Key

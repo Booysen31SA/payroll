@@ -17,6 +17,12 @@ public class Gender {
         return gender;
     }
 
+    @Override
+    public String toString() {
+        return  "Employee Number :" + empNumber +
+                "\nGender          :" + gender ;
+    }
+
     public static class Builder{
         private String empNumber;
         private String gender;
@@ -34,4 +40,5 @@ public class Gender {
             return new Gender(this);
         }
     }
+
 }

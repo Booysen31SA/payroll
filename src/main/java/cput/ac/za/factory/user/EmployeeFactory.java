@@ -4,7 +4,7 @@ import cput.ac.za.domain.demography.Gender;
 import cput.ac.za.domain.user.Employee;
 import cput.ac.za.factory.demography.GenderFactory;
 
-public class EmploeeFactory {
+public class EmployeeFactory {
 
     public static Employee buildEmployee(String empNumber, String firstName, String surname, String gender){
 

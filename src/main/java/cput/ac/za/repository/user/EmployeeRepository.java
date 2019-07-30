@@ -28,7 +28,7 @@ public class EmployeeRepository implements IEmployeeRepository{
 
     @Override
     public Employee create(Employee employee) {
-        if(employee  != null){
+        if(read(employee.getEmpNumber())  == null){
             this.employees.put(employee.getEmpNumber(),employee);
         }
         return employee;
