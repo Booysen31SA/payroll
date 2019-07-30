@@ -8,12 +8,12 @@ import java.util.Set;
 
 public class GenderService implements IGenderService{
 
-    private GenderService service = null;
+    private static GenderService service = null;
     private IGenderRepository repository;
 
     private GenderService(){this.repository = GenderRepository.getRepository();}
 
-    public GenderService getService(){if(service == null){service = new GenderService();}
+    public static GenderService getService(){if(service == null){service = new GenderService();}
     return service;
     }
     @Override

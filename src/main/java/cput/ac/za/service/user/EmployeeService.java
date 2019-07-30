@@ -8,12 +8,12 @@ import java.util.Set;
 
 public class EmployeeService implements IEmployeeService {
 
-    private EmployeeService service = null;
+    private static EmployeeService service = null;
     private IEmployeeRepository repository;
 
     private EmployeeService(){this.repository = EmployeeRepository.getRepository();}
 
-    public EmployeeService getService(){
+    public static EmployeeService getService(){
         if(service == null){service = new EmployeeService();}
         return service;
     }
