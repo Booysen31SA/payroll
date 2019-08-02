@@ -20,10 +20,9 @@ public class Gender {
 
     @Override
     public String toString() {
-        return "Gender{" +
-                "id='" + id + '\'' +
-                ", gender='" + gender + '\'' +
-                '}';
+        return
+                "ID      :" + getId()+
+                "\nGender  :" + getGender();
     }
 
     public static class Builder{

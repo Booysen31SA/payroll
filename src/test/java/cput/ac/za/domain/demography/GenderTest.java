@@ -22,7 +22,7 @@ public class GenderTest {
     @Test
     public void getId() {
      assertNotNull(repository.read(gender.getId()));
-     System.out.println("Get ID : " +repository.read(gender.getId()));
+     System.out.println("Get ID : " +gender.getGender());
     }
 
     @Test
