@@ -1,17 +1,16 @@
 package cput.ac.za.domain.demography;
 
 public class Gender {
-
-    private String id;
+    private String empNumber;
     private String gender;
 
-    public Gender(Builder Build){
-        this.id = Build.id;
+    public Gender(Gender.Builder Build){
+        this.empNumber = Build.empNumber;
         this.gender = Build.gender;
     }
 
-    public String getId() {
-        return id;
+    public String getEmpNumber() {
+        return empNumber;
     }
 
     public String getGender() {
@@ -20,18 +19,16 @@ public class Gender {
 
     @Override
     public String toString() {
-        return "Gender{" +
-                "id='" + id + '\'' +
-                ", gender='" + gender + '\'' +
-                '}';
+        return  "Employee Number :" + empNumber +
+                "\nGender          :" + gender ;
     }
 
     public static class Builder{
-        private String id;
+        private String empNumber;
         private String gender;
 
-        public Builder id(String id){
-            this.id = id;
+        public Builder empNumber(String empNumber){
+            this.empNumber = empNumber;
             return this;
         }
         public Builder gender(String gender){
@@ -43,4 +40,5 @@ public class Gender {
             return new Gender(this);
         }
     }
+
 }

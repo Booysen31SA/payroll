@@ -38,8 +38,8 @@ public class EmployeeTest {
 
     @Test
     public void getGender() {
-        assertNotNull(employee.getEmployeeGender().getEmpNumber());
-        System.out.println(employee.getEmployeeGender().getGender());
+        assertNotNull(employee.getGender().getEmpNumber());
+        System.out.println(employee.getGender().getGender());
     }
 
     @Test

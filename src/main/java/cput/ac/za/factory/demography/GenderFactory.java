@@ -4,10 +4,10 @@ import cput.ac.za.domain.demography.Gender;
 
 public class GenderFactory {
 
-    public static Gender buildGender(String id, String gender){
-        return new Gender.Builder()
-                .id(id)
-                .gender(gender)
-                .Build();
+    public static Gender buildGender(String empNumber, String gender){
+           return new Gender.Builder()
+                   .empNumber(empNumber)
+                   .gender(gender)
+                   .Build();
     }
 }

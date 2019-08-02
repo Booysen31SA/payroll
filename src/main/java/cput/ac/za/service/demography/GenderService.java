@@ -7,13 +7,14 @@ import cput.ac.za.repository.demography.IGenderRepository;
 import java.util.Set;
 
 public class GenderService implements IGenderService{
+
     private static GenderService service = null;
     private IGenderRepository repository;
 
     private GenderService(){this.repository = GenderRepository.getRepository();}
 
     public static GenderService getService(){if(service == null){service = new GenderService();}
-        return service;
+    return service;
     }
     @Override
     public Set<Gender> getAll() {
@@ -21,8 +22,8 @@ public class GenderService implements IGenderService{
     }
 
     @Override
-    public Gender create(Gender employeeGender) {
-        return this.repository.create(employeeGender);
+    public Gender create(Gender gender) {
+        return this.repository.create(gender);
     }
 
     @Override
@@ -37,6 +38,6 @@ public class GenderService implements IGenderService{
 
     @Override
     public void delete(String s) {
-        this.repository.delete(s);
+       this.repository.delete(s);
     }
 }

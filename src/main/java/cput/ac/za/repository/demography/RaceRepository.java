@@ -1,5 +1,6 @@
 package cput.ac.za.repository.demography;
 
+import cput.ac.za.domain.demography.Gender;
 import cput.ac.za.domain.demography.Race;
 
 import java.util.HashSet;
