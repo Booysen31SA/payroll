@@ -6,7 +6,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class GenderRepository implements IGenderRepository {
-
     public static GenderRepository repository;
     private Set<Gender> genders;
 
@@ -25,34 +24,34 @@ public class GenderRepository implements IGenderRepository {
     }
 
     @Override
-    public Gender create(Gender gender) {
-        if(read(gender.getEmpNumber()) == null){
-            genders.add(gender);
+    public Gender create(Gender employeeGender) {
+        if(read(employeeGender.getId()) == null){
+            genders.add(employeeGender);
         }
-        return gender;
+        return employeeGender;
     }
 
     @Override
     public Gender read(String s) {
         return genders.stream()
-                .filter(gender -> s.equalsIgnoreCase(gender.getEmpNumber()))
+                .filter(gender -> s.equalsIgnoreCase(gender.getId()))
                 .findAny()
                 .orElse(null);
     }
 
     @Override
-    public Gender update(Gender gender) {
+    public Gender update(Gender employeeGender) {
 
-        if(read(gender.getEmpNumber()) != null){
-           delete(gender.getEmpNumber());
-           create(gender);
+        if(read(employeeGender.getId()) != null){
+            delete(employeeGender.getId());
+            create(employeeGender);
         }
-        return gender;
+        return employeeGender;
     }
 
     @Override
     public void delete(String s) {
-       Gender gender = read(s);
-       this.genders.remove(gender);
+        Gender gender = read(s);
+        this.genders.remove(gender);
     }
 }

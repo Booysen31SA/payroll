@@ -13,7 +13,7 @@ public class RaceTest {
     private Race race;
     @Before
     public void setUp() throws Exception {
-        RaceRepository = RaceRepository.getRepository();
+        RaceRepository = cput.ac.za.repository.demography.RaceRepository.getRepository();
 
         race = RaceFactory.buildRace("216062241", "Coloured");
     }

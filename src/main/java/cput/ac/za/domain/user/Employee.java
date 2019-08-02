@@ -1,6 +1,6 @@
 package cput.ac.za.domain.user;
 
-import cput.ac.za.domain.demography.Gender;
+import cput.ac.za.domain.demography.EmployeeGender;
 import cput.ac.za.domain.demography.Race;
 
 public class Employee {
@@ -8,14 +8,14 @@ public class Employee {
     private String empNumber; //primary Key
     private String firstName;
     private String surname;
-    private Gender gender;
+    private EmployeeGender employeeGender;
     private Race race;
 
     public Employee(Employee.Builder Build){
         this.empNumber = Build.empNumber;
         this.firstName = Build.firstName;
         this.surname = Build.surname;
-        this.gender = Build.gender;
+        this.employeeGender = Build.employeeGender;
         this.race = Build.race;
     }
 
@@ -30,8 +30,8 @@ public class Employee {
     public String getSurname() {
         return surname;
     }
-    public Gender getGender(){
-        return gender;
+    public EmployeeGender getEmployeeGender(){
+        return employeeGender;
     }
 
     public Race getRace() {
@@ -44,9 +44,9 @@ public class Employee {
                 "Employee Number :'" + empNumber +
                 "\nFirst Name      :" + firstName +
                 "\nSurname         :" + surname +
-                "\nGender          :" + gender.getGender()+
+                "\nEmployeeGender          :" + employeeGender.getGender()+
                 "\nRace            :" + race.getRace()+
-                "\nFrom Gender\n" + gender +
+                "\nFrom EmployeeGender\n" + employeeGender +
                 "\nRace\n" +race;
     }
 
@@ -55,7 +55,7 @@ public class Employee {
         private String empNumber; //primary Key
         private String firstName;
         private String surname;
-        private Gender gender;
+        private EmployeeGender employeeGender;
         private Race race;
 
         public Builder empNumber(String empNumber){
@@ -70,8 +70,8 @@ public class Employee {
             this.surname = surname;
             return this;
         }
-        public Builder gender(Gender gender){
-            this.gender = gender;
+        public Builder gender(EmployeeGender employeeGender){
+            this.employeeGender = employeeGender;
             return this;
         }
         public Builder race(Race race){
