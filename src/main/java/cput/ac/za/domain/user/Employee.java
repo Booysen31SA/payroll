@@ -42,12 +42,12 @@ public class Employee {
     public String toString() {
         return
                 "Employee Number :'" + empNumber +
-                "\nFirst Name      :" + firstName +
-                "\nSurname         :" + surname +
-                "\nEmployeeGender          :" + employeeGender.getGender()+
-                "\nRace            :" + race.getRace()+
-                "\nFrom EmployeeGender\n" + employeeGender +
-                "\nRace\n" +race;
+                "First Name      :" + firstName +
+                "Surname         :" + surname +
+                "EmployeeGender  :" + employeeGender.getGender()+
+                "Race            :" + race.getRace()+
+                "From EmployeeGender\n" + employeeGender +
+                "From Race\n" +race;
     }
 
     public static class Builder{

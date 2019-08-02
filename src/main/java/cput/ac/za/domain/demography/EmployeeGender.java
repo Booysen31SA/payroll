@@ -20,7 +20,7 @@ public class EmployeeGender {
     @Override
     public String toString() {
         return  "Employee Number :" + empNumber +
-                "\nEmployeeGender          :" + gender ;
+                "\nEmployeeGender  :" + gender ;
     }
 
     public static class Builder{
