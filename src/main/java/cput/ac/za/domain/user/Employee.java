@@ -3,8 +3,10 @@ package cput.ac.za.domain.user;
 import cput.ac.za.domain.demography.EmployeeGender;
 import cput.ac.za.domain.demography.Race;
 
+@SuppressWarnings("ALL")
 public class Employee {
 
+    @SuppressWarnings("CanBeFinal")
     private String empNumber; //primary Key
     private String firstName;
     private String surname;

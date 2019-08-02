@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class EmployeeGenderTest {
 
     private EmployeeGenderRepository employeeGenderRepository;
