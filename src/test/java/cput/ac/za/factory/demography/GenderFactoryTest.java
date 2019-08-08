@@ -12,7 +12,7 @@ public class GenderFactoryTest {
     Gender gender;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         repository = GenderRepository.getRepository();
 
     }

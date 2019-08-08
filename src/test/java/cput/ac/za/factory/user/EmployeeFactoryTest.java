@@ -10,7 +10,7 @@ public class EmployeeFactoryTest {
 
     Employee employee;
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         employee = EmployeeFactory.buildEmployee("216062241"
                                                  ,"Matthew"
                                                  ,"Booysen"

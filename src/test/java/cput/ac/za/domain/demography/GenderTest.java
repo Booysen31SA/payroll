@@ -13,7 +13,7 @@ public class GenderTest {
     Gender gender;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         repository = GenderRepository.getRepository();
         gender = GenderFactory.buildGender("Male", "Male");
         repository.create(gender);
@@ -22,7 +22,7 @@ public class GenderTest {
     @Test
     public void getId() {
      assertNotNull(repository.read(gender.getId()));
-     System.out.println("Get ID : " +gender.getGender());
+     System.out.println("Get ID : " +repository.read(gender.getId()));
     }
 
     @Test

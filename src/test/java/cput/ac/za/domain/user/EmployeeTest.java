@@ -13,7 +13,7 @@ public class EmployeeTest {
     private Employee employee;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         employeeRepository = EmployeeRepository.getRepository();
         employee = EmployeeFactory.buildEmployee("216062241", "Matthew", "Booysen", "Male", "Coloured");
     }

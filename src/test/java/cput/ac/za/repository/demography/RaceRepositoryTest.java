@@ -13,7 +13,7 @@ public class RaceRepositoryTest {
     Race race;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         repository = RaceRepository.getRepository();
         race = RaceFactory.buildRace("216062241"
                 , "Coloured");

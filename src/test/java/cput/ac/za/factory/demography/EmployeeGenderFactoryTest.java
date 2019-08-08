@@ -10,7 +10,7 @@ public class EmployeeGenderFactoryTest {
 
     EmployeeGender employeeGender;
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         employeeGender = EmployeeGenderFactory.buildEmployeeGender("216062241", "Male");
     }
 

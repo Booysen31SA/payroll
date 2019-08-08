@@ -13,7 +13,7 @@ public class EmployeeGenderTest {
     private EmployeeGenderRepository employeeGenderRepository;
     private EmployeeGender employeeGender;
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
     employeeGenderRepository = EmployeeGenderRepository.getRepository();
 
     employeeGender = EmployeeGenderFactory.buildEmployeeGender("216062241", "Male");

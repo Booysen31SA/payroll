@@ -13,7 +13,7 @@ public class EmployeeServiceTest {
     Employee employee;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
           service = EmployeeService.getService();
                  employee = EmployeeFactory.buildEmployee("216062241"
                                                         , "Matthew"

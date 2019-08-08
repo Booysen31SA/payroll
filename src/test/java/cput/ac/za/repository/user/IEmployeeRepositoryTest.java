@@ -6,7 +6,7 @@ import org.junit.Test;
 public class IEmployeeRepositoryTest {
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
     }
 
     @Test

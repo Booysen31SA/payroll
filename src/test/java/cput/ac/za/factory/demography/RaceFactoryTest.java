@@ -10,7 +10,7 @@ public class RaceFactoryTest {
 
     Race race;
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
        race  = RaceFactory.buildRace("216062241", "Coloured");
     }
 

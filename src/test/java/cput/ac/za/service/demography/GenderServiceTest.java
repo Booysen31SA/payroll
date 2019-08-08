@@ -13,7 +13,7 @@ public class GenderServiceTest {
     Gender gender;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         service = GenderService.getService();
         gender = GenderFactory.buildGender("Male", "Male");
 

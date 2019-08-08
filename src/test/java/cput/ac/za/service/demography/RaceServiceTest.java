@@ -13,7 +13,7 @@ public class RaceServiceTest {
     Race race;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         service = RaceService.getService();
         race = RaceFactory.buildRace("216062241"
                 , "Coloured");
