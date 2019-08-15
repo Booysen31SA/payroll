@@ -7,4 +7,5 @@ import java.util.Set;
 
 public interface IRaceRepository extends IRepository<Race, Integer> {
     Set<Race> getAll();
+    Race getRace(String id);
 }

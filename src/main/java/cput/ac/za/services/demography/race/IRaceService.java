@@ -6,4 +6,5 @@ import java.util.Set;
 
 public interface IRaceService extends IService<Race, Integer> {
     Set<Race> getAll();
+    Race getRace(String id);
 }

@@ -26,6 +26,14 @@ public class RaceRepositoryImpl implements IRaceRepository {
     }
 
     @Override
+    public Race getRace(String id) {
+        return races.stream()
+                .filter(race -> id.equalsIgnoreCase(race.getRaceType()))
+                .findAny()
+                .orElse(null);
+    }
+
+    @Override
     public Race create(Race race) {
         if(read(race.getCode()) == null){
             races.add(race);

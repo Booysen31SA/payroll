@@ -23,6 +23,11 @@ public class RaceServiceImpl implements IRaceService {
     }
 
     @Override
+    public Race getRace(String id) {
+        return null;
+    }
+
+    @Override
     public Race create(Race race) {
         return this.repository.create(race);
     }
@@ -41,4 +46,5 @@ public class RaceServiceImpl implements IRaceService {
     public void delete(Integer s) {
         this.repository.delete(s);
     }
+
 }
