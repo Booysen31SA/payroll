@@ -41,4 +41,8 @@ public class GenderServiceImpl implements IGenderService {
     public void delete(Integer s) {
         this.repository.delete(s);
     }
+
+    public Gender getGender(String s) {
+        return this.repository.getGender(s);
+    }
 }

@@ -7,4 +7,5 @@ import java.util.Set;
 
 public interface IGenderRepository extends IRepository <Gender, Integer>{
     Set<Gender> getAll();
+    Gender getGender(String id);
 }

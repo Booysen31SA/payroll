@@ -10,7 +10,7 @@ public class GenderRepositoryImpl implements IGenderRepository {
 
 
     public static GenderRepositoryImpl repository;
-    private Set<Gender> genders;
+    private static Set<Gender> genders;
 
     private GenderRepositoryImpl() {
         this.genders = new HashSet<>();
@@ -56,5 +56,12 @@ public class GenderRepositoryImpl implements IGenderRepository {
     public void delete(Integer s) {
         Gender gender = read(s);
         this.genders.remove(gender);
+    }
+    @Override
+    public Gender getGender(String id){
+        return genders.stream()
+                .filter(gender -> id .equalsIgnoreCase(gender.getGenderType()))
+                .findAny()
+                .orElse(null);
     }
 }
