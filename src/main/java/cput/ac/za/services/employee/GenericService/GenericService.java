@@ -16,7 +16,7 @@ import cput.ac.za.services.employee.impl.EmployeeServiceImpl;
 
 public class GenericService {
 
-    public Employee createEmployee(String empNumber, String fname, String lName, String gender, String race){
+    public static Employee createEmployee(String empNumber, String fname, String lName, String gender, String race){
         Employee employee = EmployeeFactory.buildEmployee(empNumber, fname, lName);
         Gender g = GenderServiceImpl.getService().getGender(gender);
         Race r = RaceServiceImpl.getService().getRace(race);
@@ -25,6 +25,8 @@ public class GenericService {
         EmployeeServiceImpl.getService().create(employee);
         EmployeeGenderServiceImpl.getService().create(eg);
         EmployeeRaceServiceImpl.getService().create(er);
+        System.out.println(er);
+        System.out.println(eg);
         return employee;
     }
 }
