@@ -30,7 +30,7 @@ public class GenericServiceTest {
 
     @Test
     public void createEmployee() {
-        Employee employee = GenericService.createEmployee("216062241", "Matthew", "Booysen", "Male", "Coloured");
+         Employee employee = GenericService.createEmployee("216062241", "Matthew", "Booysen", "Male", "Coloured");
 
          assertNotNull(employee);
          System.out.println(employee);
