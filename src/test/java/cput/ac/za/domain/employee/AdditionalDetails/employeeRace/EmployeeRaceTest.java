@@ -1,6 +1,5 @@
 package cput.ac.za.domain.employee.AdditionalDetails.employeeRace;
 
-import cput.ac.za.factory.employee.AdditionalDetails.employeeGender.EmployeeGenderFactory;
 import cput.ac.za.factory.employee.AdditionalDetails.employeeRace.EmployeeRaceFactory;
 import cput.ac.za.repository.employee.AdditionalDetails.employeeRace.impl.EmployeeRaceRepositoryImpl;
 import org.junit.Before;
@@ -10,8 +9,8 @@ import static org.junit.Assert.*;
 
 public class EmployeeRaceTest {
 
-    EmployeeRaceRepositoryImpl repository;
-    EmployeeRace employeeRace;
+    private EmployeeRaceRepositoryImpl repository;
+    private EmployeeRace employeeRace;
 
     @Before
     public void setUp(){

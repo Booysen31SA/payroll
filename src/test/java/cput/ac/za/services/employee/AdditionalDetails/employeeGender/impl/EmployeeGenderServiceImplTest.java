@@ -2,7 +2,6 @@ package cput.ac.za.services.employee.AdditionalDetails.employeeGender.impl;
 
 import cput.ac.za.domain.employee.AdditionalDetails.employeeGender.EmployeeGender;
 import cput.ac.za.factory.employee.AdditionalDetails.employeeGender.EmployeeGenderFactory;
-import cput.ac.za.factory.employee.EmployeeFactory;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -2,7 +2,6 @@ package cput.ac.za.repository.employee.impl;
 
 import cput.ac.za.domain.employee.Employee;
 import cput.ac.za.factory.employee.EmployeeFactory;
-import cput.ac.za.repository.demography.gender.impl.GenderRepositoryImpl;
 import org.junit.Before;
 import org.junit.Test;
 

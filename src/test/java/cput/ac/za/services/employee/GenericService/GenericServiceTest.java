@@ -15,29 +15,24 @@ import static org.junit.Assert.*;
 public class GenericServiceTest {
 
     private GenericService service;
-    private GenderServiceImpl genderService;
-    private RaceServiceImpl raceService;
-    private Employee employee;
-    private Gender gender;
-    private Race race;
 
 
     @Before
     public void setUp(){
-        genderService = GenderServiceImpl.getService();
-        raceService = RaceServiceImpl.getService();
+        GenderServiceImpl genderService = GenderServiceImpl.getService();
+        RaceServiceImpl raceService = RaceServiceImpl.getService();
 
-        gender = GenderFactory.buildGender(1, "Male");
-        race = RaceFactory.raceBuild(1, "Coloured");
+        Gender gender = GenderFactory.buildGender(1, "Male");
+        Race race = RaceFactory.raceBuild(1, "Coloured");
         genderService.create(gender);
         raceService.create(race);
     }
 
     @Test
     public void createEmployee() {
-         employee = GenericService.createEmployee("216062241", "Matthew", "Booysen", "Male", "Coloured");
+        Employee employee = GenericService.createEmployee("216062241", "Matthew", "Booysen", "Male", "Coloured");
 
          assertNotNull(employee);
-        System.out.println(employee);
+         System.out.println(employee);
     }
 }
