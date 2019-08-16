@@ -20,7 +20,7 @@ public class EmployeeRace {
 
     @Override
     public String toString() {
-        return "EmployeeGender{" +
+        return "EmployeeRace{" +
                 "empID='" + empID + '\'' +
                 ", code=" + code +
                 '}';
