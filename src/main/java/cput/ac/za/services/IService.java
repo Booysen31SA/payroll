@@ -1,6 +1,7 @@
-package cput.ac.za.repository;
+package cput.ac.za.services;
 
-public interface IRepository <NameOfRepo, ID>{
+public interface IService<NameOfRepo, ID> {
+
     NameOfRepo create(NameOfRepo name);
     NameOfRepo read(ID id);
     NameOfRepo update(NameOfRepo name);
