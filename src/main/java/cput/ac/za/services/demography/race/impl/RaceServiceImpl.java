@@ -24,7 +24,7 @@ public class RaceServiceImpl implements IRaceService {
 
     @Override
     public Race getRace(String id) {
-        return null;
+        return repository.getRace(id);
     }
 
     @Override

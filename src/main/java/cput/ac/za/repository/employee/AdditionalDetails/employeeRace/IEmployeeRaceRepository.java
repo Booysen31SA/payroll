@@ -7,4 +7,5 @@ import java.util.Set;
 
 public interface IEmployeeRaceRepository extends IRepository<EmployeeRace, String> {
     Set<EmployeeRace> getAll();
+
 }
